@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projeto Sustentável - Engenharia da Computação</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0fdf4, #e0f2f1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding-bottom: 80px;
+    }
+
+    .topo-img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-bottom: 5px solid #00796b;
+    }
+
+    .content-box {
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .content-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    h2, p {
+      text-align: center;
+      color: #004d40;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      color: #004d40;
+    }
+
+    .ui-btn-b {
+      background-color: #00796b !important;
+      border-color: #004d40 !important;
+      font-weight: 600;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ui-btn-b:hover,
+    .ui-btn-b:focus {
+      background-color: #004d40 !important;
+      box-shadow: 0 0 10px #004d40;
+    }
+
+    iframe {
+      border-radius: 10px;
+      margin-top: 15px;
+      max-width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      color: #004d40;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #e0f2f1;
+      text-align: left;
+    }
+
+    /* Rodapé fixo */
+    .custom-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      z-index: 9999;
+    }
+
+    .footer-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 22px;
+      text-decoration: none;
+    }
+
+    .footer-icons a:hover {
+      color: #b2dfdb;
+    }
+  </style>
+</head>
+<body>
+
+<div data-role="page" id="inicio">
+
+
+  <img src="tecsust.jpeg" alt="Imagem topo do projeto" class="topo-img" />
+
+  <div data-role="content">
+
+    <div class="content-box">
+      <h2>Bem-vindo!</h2>
+      <p>Este simulador foi desenvolvido como atividade de extensão do curso de <strong>Engenharia da Computação</strong>, com foco em sustentabilidade.</p>
+      <p>Ele ajuda a estimar o <strong>consumo energético</strong> e o <strong>impacto ambiental</strong> de dispositivos eletrônicos usados no dia a dia.</p>
+      <a href="simulador.html" class="ui-btn ui-btn-b" data-ajax="false">Acessar o Simulador</a>
+    </div>
+
+    <div class="content-box">
+      <h2>Ciência por trás do simulador</h2>
+      <p><strong>Física:</strong> Utilizamos conceitos como <em>potência elétrica</em> (P = V x I), <em>energia</em> (E = P x t), e <em>dissipação térmica</em> para calcular o consumo mensal de eletrônicos. Esses princípios são essenciais para entender o funcionamento dos dispositivos e como otimizá-los.</p>
+      <p><strong>Química:</strong> Consideramos a <em>emissão de CO₂</em> com base nas reações de combustão em usinas termoelétricas, e no impacto ambiental causado por elementos como chumbo, mercúrio e cádmio presentes em placas, baterias e componentes eletrônicos descartados inadequadamente.</p>
+    </div>
+
+    <div class="content-box">
+      <h2>Dicas sustentáveis</h2>
+      <ul>
+        <li><strong>Evite modo standby:</strong> aparelhos continuam consumindo energia (corrente fantasma).</li>
+        <li><strong>Descarte consciente:</strong> metais pesados contaminam solo e água.</li>
+        <li><strong>Use energia limpa ou solar:</strong> reduz emissão de CO₂.</li>
+        <li><strong>Prefira baterias recarregáveis:</strong> geram menos resíduos tóxicos.</li>
+        <li><strong>Reduza o tempo de uso:</strong> menor impacto ambiental.</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <h2>Componentes eletrônicos e seus riscos ambientais</h2>
+      <p>Equipamentos de informática contêm metais e compostos perigosos que, se descartados incorretamente, prejudicam o meio ambiente.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Substâncias Tóxicas</th>
+            <th>Riscos do Descarte Incorreto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Placa-mãe / circuitos</td>
+            <td>Chumbo, mercúrio, cádmio</td>
+            <td>Contaminação do solo e da água, toxicidade para organismos vivos</td>
+          </tr>
+          <tr>
+            <td>Baterias</td>
+            <td>Lítio, níquel, cobalto</td>
+            <td>Risco de explosão, vazamento de metais pesados</td>
+          </tr>
+          <tr>
+            <td>Monitores LCD/LED</td>
+            <td>Mercúrio, fósforo</td>
+            <td>Liberação de vapores tóxicos, risco respiratório</td>
+          </tr>
+          <tr>
+            <td>HDs e SSDs</td>
+            <td>Metais pesados, solventes</td>
+            <td>Contaminação química e física de ecossistemas</td>
+          </tr>
+          <tr>
+            <td>Cabos e fios</td>
+            <td>PVC, cobre</td>
+            <td>Liberação de dioxinas na queima, intoxicação do ar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="content-box">
+      <h2>Descarte correto de eletrônicos</h2>
+        <p>Para reduzir os impactos ambientais e à saúde, o descarte de lixo eletrônico deve ser feito de forma consciente:</p>
+      <ul>
+        <li>🔋 Leve baterias e pilhas a pontos de coleta em supermercados ou lojas de eletrônicos;</li>
+        <li>🖥️ Entregue computadores e periféricos obsoletos em <strong>ecopontos ou empresas especializadas</strong> em reciclagem eletrônica;</li>
+        <li>🏪 Verifique se a loja onde comprou o aparelho participa de programas de logística reversa;</li>
+        <li>🤝 Participe de campanhas de recolhimento em escolas, universidades e prefeituras locais;</li>
+        <li>📦 Nunca descarte eletrônicos em lixo comum: isso compromete o solo, a água e o ar.</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <h2>Vídeo: Sustentabilidade na Informática</h2>
+      <p>Veja como a informática pode ser mais sustentável:</p>
+      <iframe src="https://www.youtube.com/watch?v=3OfJ2KIRjy0" allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+  <!-- Rodapé fixo -->
+  <div class="custom-footer">
+    <h4 style="margin: 5px 0;">Projeto de Extensão | Engenharia da Computação - 2025.2</h4>
+    <div class="footer-icons">
+      <a href="mailto:anderson.tardelli@celsoonline.com.br" target="_blank" aria-label="Enviar e-mail"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/5522998772737" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
